@@ -32,9 +32,8 @@ app.use((req, res, next) => {
     next();
 });
 
-
-
-app.listen(9000, 'localhost', () => {
+const port = process.env.PORT || 3000;
+app.listen(port, 'localhost', () => {
     console.log('Server started');
 })
 app.use(express.json())
