@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, 'localhost', () => {
+app.listen(port, () => {
     console.log('Server started');
 })
 app.use(express.json())
