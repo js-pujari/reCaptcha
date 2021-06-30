@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const vegSchema = new mongoose.Schema({
+const utilitySchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -15,4 +15,5 @@ const vegSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Veggies', vegSchema);
+
+module.exports = mongoose.model('Utility', utilitySchema);
