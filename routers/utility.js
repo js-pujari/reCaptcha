@@ -4,28 +4,31 @@ const Utility = require('../models/UtilityModel');
 const fetch = require('node-fetch')
 
 router.get('/', async (req, res) => {
-    try {
-        const Vegitables = await Utility.find();
-        res.json(Vegitables);
+    // try {
+    //     const Vegitables = await Utility.find();
+    //     res.json(Vegitables);
 
-    } catch (err) {
-        res.send('Error' + err);
-    }
+    // } catch (err) {
+    //     res.send('Error' + err);
+    // }
+    res.json({ route: 'utility-get', value: 'Get route implementing' })
+
 })
 
 router.post('/', async (req, res) => {
-    const vegitables = new Utility({
-        name: req.body.name,
-        quantity: req.body.quantity,
-        price: req.body.price
-    })
-    try {
-        const savedUtility = await vegitables.save();
-        res.json(savedUtility);
+    // const vegitables = new Utility({
+    //     name: req.body.name,
+    //     quantity: req.body.quantity,
+    //     price: req.body.price
+    // })
+    // try {
+    //     const savedUtility = await vegitables.save();
+    //     res.json(savedUtility);
 
-    } catch (err) {
-        res.send('Error' + err);
-    }
+    // } catch (err) {
+    //     res.send('Error' + err);
+    // }
+    res.json({ route: 'utility-post', value: 'Post route implementing' })
 })
 
 router.post('/tkn', async (req, res, next) => {

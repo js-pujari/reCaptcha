@@ -6,14 +6,14 @@ const defRouter = require('./routers/Default');
 const loginRouter = require('./routers/Login');
 const app = express();
 
-const dbUrl = 'mongodb://localhost/JstpDB';
+// const dbUrl = 'mongodb://localhost/JstpDB';
 
-mongoose.connect(dbUrl, { useNewUrlParser: true });
-const conn = mongoose.connection;
+// mongoose.connect(dbUrl, { useNewUrlParser: true });
+// const conn = mongoose.connection;
 
-conn.on('open', () => {
-    console.log('MongoDB open');
-})
+// conn.on('open', () => {
+//     console.log('MongoDB open');
+// })
 
 
 // const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@aiw.jmngl.mongodb.net/gig?retryWrites=true&w=majority`;
